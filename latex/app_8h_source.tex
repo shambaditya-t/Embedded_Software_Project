@@ -1,0 +1,55 @@
+\hypertarget{app_8h_source}{}\doxysection{app.\+h}
+\label{app_8h_source}\index{src/Header Files/app.h@{src/Header Files/app.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//***********************************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{// Include files}}
+\DoxyCodeLine{3 \textcolor{comment}{//***********************************************************************************}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifndef APP\_HG}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define APP\_HG}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{comment}{/* System include statements */}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{comment}{/* Silicon Labs include statements */}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}em\_cmu.h"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}em\_assert.h"{}}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{comment}{/* The developer's include statements */}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}cmu.h"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}gpio.h"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}letimer.h"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}brd\_config.h"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}scheduler.h"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}LEDs\_thunderboard.h"{}}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{comment}{//***********************************************************************************}}
+\DoxyCodeLine{24 \textcolor{comment}{// defined files}}
+\DoxyCodeLine{25 \textcolor{comment}{//***********************************************************************************}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define   PWM\_PER         3.0   }\textcolor{comment}{// PWM period in seconds}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define   PWM\_ACT\_PER     0.001 }\textcolor{comment}{// PWM active period in seconds}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#define LETIMER0\_COMP0\_CB 0x00000001   }\textcolor{comment}{//0b0001}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#define LETIMER0\_COMP1\_CB 0x00000002   }\textcolor{comment}{//0b0010}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#define LETIMER0\_UF\_CB    0x00000004      }\textcolor{comment}{//0b0100}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{comment}{//***********************************************************************************}}
+\DoxyCodeLine{37 \textcolor{comment}{// global variables}}
+\DoxyCodeLine{38 \textcolor{comment}{//***********************************************************************************}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{comment}{//***********************************************************************************}}
+\DoxyCodeLine{42 \textcolor{comment}{// function prototypes}}
+\DoxyCodeLine{43 \textcolor{comment}{//***********************************************************************************}}
+\DoxyCodeLine{44 \textcolor{keywordtype}{void} \mbox{\hyperlink{app_8c_ab8cdb39575ad0f98ace1c6fbd9c54b83}{app\_peripheral\_setup}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{45 \textcolor{keywordtype}{void} \mbox{\hyperlink{app_8c_a1a9d1e1d44bd0e250b4487029f89b091}{scheduled\_letimer0\_uf\_cb}} (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{46 \textcolor{keywordtype}{void} \mbox{\hyperlink{app_8c_a52609454c2bcb62915a021fd3bf37695}{scheduled\_letimer0\_comp0\_cb}} (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{47 \textcolor{keywordtype}{void} \mbox{\hyperlink{app_8c_affb614dc52fb9577fbd67cf9150f6ed5}{scheduled\_letimer0\_comp1\_cb}} (\textcolor{keywordtype}{void});}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

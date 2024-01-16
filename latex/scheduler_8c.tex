@@ -1,0 +1,109 @@
+\hypertarget{scheduler_8c}{}\doxysection{src/\+Source Files/scheduler.c File Reference}
+\label{scheduler_8c}\index{src/Source Files/scheduler.c@{src/Source Files/scheduler.c}}
+
+
+Setting up the scheduler file.  
+
+
+{\ttfamily \#include \char`\"{}scheduler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}em\+\_\+assert.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}em\+\_\+core.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}em\+\_\+emu.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{scheduler_8c_afbc09e3ce15ae2e0f91802ec1a8d2549}{scheduler\+\_\+open}} (void)
+\begin{DoxyCompactList}\small\item\em This function sets up the schedular portion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{scheduler_8c_a4656e4fa005f4bef2f132423f1fc08c8}{add\+\_\+scheduled\+\_\+event}} (uint32\+\_\+t event)
+\begin{DoxyCompactList}\small\item\em Adds a new event to the scheduler event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{scheduler_8c_a89d9fd534ca49cadaeebe2048f2f6294}{remove\+\_\+scheduled\+\_\+event}} (uint32\+\_\+t event)
+\begin{DoxyCompactList}\small\item\em Removes an event of the scheduler event. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{scheduler_8c_a78f831851a72a952fa57b5528ebd5536}{get\+\_\+scheduled\+\_\+events}} (void)
+\begin{DoxyCompactList}\small\item\em Function which returns the events\+\_\+scheduled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Setting up the scheduler file. 
+
+\begin{DoxyAuthor}{Author}
+Shambaditya Tarafder 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/23/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{scheduler_8c_a4656e4fa005f4bef2f132423f1fc08c8}\label{scheduler_8c_a4656e4fa005f4bef2f132423f1fc08c8}} 
+\index{scheduler.c@{scheduler.c}!add\_scheduled\_event@{add\_scheduled\_event}}
+\index{add\_scheduled\_event@{add\_scheduled\_event}!scheduler.c@{scheduler.c}}
+\doxysubsubsection{\texorpdfstring{add\_scheduled\_event()}{add\_scheduled\_event()}}
+{\footnotesize\ttfamily void add\+\_\+scheduled\+\_\+event (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{event }\end{DoxyParamCaption})}
+
+
+
+Adds a new event to the scheduler event. 
+
+ORs a new event, the input argument,into the existing state of the private (static) variable event\+\_\+scheduled
+
+\begin{DoxyNote}{Note}
+Should be called only when adding an event
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em event} & Its is basically a 32 bit integer of the event to be added to the scheduler \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{scheduler_8c_a78f831851a72a952fa57b5528ebd5536}\label{scheduler_8c_a78f831851a72a952fa57b5528ebd5536}} 
+\index{scheduler.c@{scheduler.c}!get\_scheduled\_events@{get\_scheduled\_events}}
+\index{get\_scheduled\_events@{get\_scheduled\_events}!scheduler.c@{scheduler.c}}
+\doxysubsubsection{\texorpdfstring{get\_scheduled\_events()}{get\_scheduled\_events()}}
+{\footnotesize\ttfamily uint32\+\_\+t get\+\_\+scheduled\+\_\+events (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function which returns the events\+\_\+scheduled. 
+
+Returns the current state of the private (static) variable event\+\_\+scheduled.
+
+\begin{DoxyNote}{Note}
+
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Returns the event\+\_\+scheduled as an integer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{scheduler_8c_a89d9fd534ca49cadaeebe2048f2f6294}\label{scheduler_8c_a89d9fd534ca49cadaeebe2048f2f6294}} 
+\index{scheduler.c@{scheduler.c}!remove\_scheduled\_event@{remove\_scheduled\_event}}
+\index{remove\_scheduled\_event@{remove\_scheduled\_event}!scheduler.c@{scheduler.c}}
+\doxysubsubsection{\texorpdfstring{remove\_scheduled\_event()}{remove\_scheduled\_event()}}
+{\footnotesize\ttfamily void remove\+\_\+scheduled\+\_\+event (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{event }\end{DoxyParamCaption})}
+
+
+
+Removes an event of the scheduler event. 
+
+Removes the event, the input argument, from the existing state of the private(static)variable event\+\_\+scheduled.
+
+\begin{DoxyNote}{Note}
+Function should only be called when removing an event
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em event} & Its is basically a 32 bit integer of the event to be removed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{scheduler_8c_afbc09e3ce15ae2e0f91802ec1a8d2549}\label{scheduler_8c_afbc09e3ce15ae2e0f91802ec1a8d2549}} 
+\index{scheduler.c@{scheduler.c}!scheduler\_open@{scheduler\_open}}
+\index{scheduler\_open@{scheduler\_open}!scheduler.c@{scheduler.c}}
+\doxysubsubsection{\texorpdfstring{scheduler\_open()}{scheduler\_open()}}
+{\footnotesize\ttfamily void scheduler\+\_\+open (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function sets up the schedular portion. 
+
+Opens the scheduler functionality by resetting the static / private variable event\+\_\+scheduled to 0.
+
+\begin{DoxyNote}{Note}
+Before doing anything with the scheduler this first must first be initialized 
+\end{DoxyNote}

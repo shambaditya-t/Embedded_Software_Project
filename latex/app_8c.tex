@@ -1,0 +1,94 @@
+\hypertarget{app_8c}{}\doxysection{src/\+Source Files/app.c File Reference}
+\label{app_8c}\index{src/Source Files/app.c@{src/Source Files/app.c}}
+
+
+This file basically constructs the letimer struct,uf,comp0,comp1 and sets up the various application peripheral.  
+
+
+{\ttfamily \#include \char`\"{}app.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}LEDs\+\_\+thunderboard.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{app_8c_ab8cdb39575ad0f98ace1c6fbd9c54b83}{app\+\_\+peripheral\+\_\+setup}} (void)
+\begin{DoxyCompactList}\small\item\em This is the setup for the LETIMER peripheral setup. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{app_8c_a1a9d1e1d44bd0e250b4487029f89b091}{scheduled\+\_\+letimer0\+\_\+uf\+\_\+cb}} (void)
+\begin{DoxyCompactList}\small\item\em This is the setup for handling UF interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{app_8c_a52609454c2bcb62915a021fd3bf37695}{scheduled\+\_\+letimer0\+\_\+comp0\+\_\+cb}} (void)
+\begin{DoxyCompactList}\small\item\em This is the setup for the comp1 interuppts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{app_8c_affb614dc52fb9577fbd67cf9150f6ed5}{scheduled\+\_\+letimer0\+\_\+comp1\+\_\+cb}} (void)
+\begin{DoxyCompactList}\small\item\em This is the setup for the comp0 interrupts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file basically constructs the letimer struct,uf,comp0,comp1 and sets up the various application peripheral. 
+
+\begin{DoxyAuthor}{Author}
+Shambaditya Tarafder 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/2/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{app_8c_ab8cdb39575ad0f98ace1c6fbd9c54b83}\label{app_8c_ab8cdb39575ad0f98ace1c6fbd9c54b83}} 
+\index{app.c@{app.c}!app\_peripheral\_setup@{app\_peripheral\_setup}}
+\index{app\_peripheral\_setup@{app\_peripheral\_setup}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{app\_peripheral\_setup()}{app\_peripheral\_setup()}}
+{\footnotesize\ttfamily void app\+\_\+peripheral\+\_\+setup (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This is the setup for the LETIMER peripheral setup. 
+
+This function makes call to the \mbox{\hyperlink{cmu_8c_a0bf9288af36bde6e21cc7c79382fff11}{cmu\+\_\+open()}} ,\mbox{\hyperlink{gpio_8c_a91a4dff26d2a05c597f7c541a6026613}{gpio\+\_\+open()}},\mbox{\hyperlink{scheduler_8c_afbc09e3ce15ae2e0f91802ec1a8d2549}{scheduler\+\_\+open()}}, sleep\+\_\+(),\mbox{\hyperlink{_l_e_ds__thunderboard_8c_a5aa509ed3a4cfe6f812692e248618a51}{rgb\+\_\+init()}} function for the initial setup.\+then called the \mbox{\hyperlink{letimer_8c_a4653df6b569762ff8dae0013a9942a56}{letimer\+\_\+pwm\+\_\+open()}} function and starts the LETIMER0
+
+\begin{DoxyNote}{Note}
+This function is for setting up and intializing the application peripherals only 
+\end{DoxyNote}
+\mbox{\Hypertarget{app_8c_a52609454c2bcb62915a021fd3bf37695}\label{app_8c_a52609454c2bcb62915a021fd3bf37695}} 
+\index{app.c@{app.c}!scheduled\_letimer0\_comp0\_cb@{scheduled\_letimer0\_comp0\_cb}}
+\index{scheduled\_letimer0\_comp0\_cb@{scheduled\_letimer0\_comp0\_cb}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{scheduled\_letimer0\_comp0\_cb()}{scheduled\_letimer0\_comp0\_cb()}}
+{\footnotesize\ttfamily void scheduled\+\_\+letimer0\+\_\+comp0\+\_\+cb (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This is the setup for the comp1 interuppts. 
+
+Not Applicable as we are not using this function at this moment
+
+\begin{DoxyNote}{Note}
+Calling this function would place this function in an EFM False loop. 
+\end{DoxyNote}
+\mbox{\Hypertarget{app_8c_affb614dc52fb9577fbd67cf9150f6ed5}\label{app_8c_affb614dc52fb9577fbd67cf9150f6ed5}} 
+\index{app.c@{app.c}!scheduled\_letimer0\_comp1\_cb@{scheduled\_letimer0\_comp1\_cb}}
+\index{scheduled\_letimer0\_comp1\_cb@{scheduled\_letimer0\_comp1\_cb}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{scheduled\_letimer0\_comp1\_cb()}{scheduled\_letimer0\_comp1\_cb()}}
+{\footnotesize\ttfamily void scheduled\+\_\+letimer0\+\_\+comp1\+\_\+cb (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This is the setup for the comp0 interrupts. 
+
+Calling this function is what enables the thunderboard to rotate red,green and blue in sync with the green led.
+
+\begin{DoxyNote}{Note}
+This function is used for rotating through the RGB LED 
+\end{DoxyNote}
+\mbox{\Hypertarget{app_8c_a1a9d1e1d44bd0e250b4487029f89b091}\label{app_8c_a1a9d1e1d44bd0e250b4487029f89b091}} 
+\index{app.c@{app.c}!scheduled\_letimer0\_uf\_cb@{scheduled\_letimer0\_uf\_cb}}
+\index{scheduled\_letimer0\_uf\_cb@{scheduled\_letimer0\_uf\_cb}!app.c@{app.c}}
+\doxysubsubsection{\texorpdfstring{scheduled\_letimer0\_uf\_cb()}{scheduled\_letimer0\_uf\_cb()}}
+{\footnotesize\ttfamily void scheduled\+\_\+letimer0\+\_\+uf\+\_\+cb (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This is the setup for handling UF interrupts. 
+
+This function sets the interrupts and then it stops the color of RGB according to the various if-\/else statements.
+
+\begin{DoxyNote}{Note}
+This function is for setting up and initializing the UF interrupts wrt to the RGB LED setup. 
+\end{DoxyNote}

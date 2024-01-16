@@ -1,0 +1,92 @@
+\hypertarget{sl__board__control__config_8h_source}{}\doxysection{sl\+\_\+board\+\_\+control\+\_\+config.\+h}
+\label{sl__board__control__config_8h_source}\index{config/sl\_board\_control\_config.h@{config/sl\_board\_control\_config.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SL\_BOARD\_CONTROL\_CONFIG\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SL\_BOARD\_CONTROL\_CONFIG\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{comment}{// <<< Use Configuration Wizard in Context Menu >>>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{comment}{// <q SL\_BOARD\_ENABLE\_SENSOR\_RHT> Enable Relative Humidity and Temperature sensor}}
+\DoxyCodeLine{7 \textcolor{comment}{// <i> Default: 0}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define SL\_BOARD\_ENABLE\_SENSOR\_RHT              0}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{comment}{// <q SL\_BOARD\_ENABLE\_SENSOR\_HALL> Enable Hall Effect sensor}}
+\DoxyCodeLine{11 \textcolor{comment}{// <i> Default: 0}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define SL\_BOARD\_ENABLE\_SENSOR\_HALL             0}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{comment}{// <q SL\_BOARD\_ENABLE\_SENSOR\_PRESSURE> Enable Barometric Pressure sensor}}
+\DoxyCodeLine{15 \textcolor{comment}{// <i> Default: 0}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define SL\_BOARD\_ENABLE\_SENSOR\_PRESSURE         0}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{comment}{// <q SL\_BOARD\_ENABLE\_SENSOR\_LIGHT> Enable Light sensor}}
+\DoxyCodeLine{19 \textcolor{comment}{// <i> Default: 0}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define SL\_BOARD\_ENABLE\_SENSOR\_LIGHT            0}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{comment}{// <q SL\_BOARD\_ENABLE\_SENSOR\_GAS> Enable Air Quality sensor}}
+\DoxyCodeLine{23 \textcolor{comment}{// <i> Default: 0}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define SL\_BOARD\_ENABLE\_SENSOR\_GAS              0}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{comment}{// <q SL\_BOARD\_ENABLE\_SENSOR\_IMU> Enable Inertial Measurement Unit}}
+\DoxyCodeLine{27 \textcolor{comment}{// <i> Default: 0}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#define SL\_BOARD\_ENABLE\_SENSOR\_IMU              0}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{comment}{// <q SL\_BOARD\_ENABLE\_SENSOR\_MICROPHONE> Enable Microphone}}
+\DoxyCodeLine{31 \textcolor{comment}{// <i> Default: 0}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#define SL\_BOARD\_ENABLE\_SENSOR\_MICROPHONE       0}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{comment}{// <q SL\_BOARD\_DISABLE\_MEMORY\_SPI> Disable SPI Flash}}
+\DoxyCodeLine{35 \textcolor{comment}{// <i> Default: 1}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#define SL\_BOARD\_DISABLE\_MEMORY\_SPI             1}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{comment}{// <<< end of configuration section >>>}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{comment}{// <<< sl:start pin\_tool >>>}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{comment}{// <gpio> SL\_BOARD\_ENABLE\_SENSOR\_RHT}}
+\DoxyCodeLine{43 \textcolor{comment}{// \$[GPIO\_SL\_BOARD\_ENABLE\_SENSOR\_RHT]}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#define SL\_BOARD\_ENABLE\_SENSOR\_RHT\_PORT          gpioPortF}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#define SL\_BOARD\_ENABLE\_SENSOR\_RHT\_PIN           9}}
+\DoxyCodeLine{46 \textcolor{comment}{// [GPIO\_SL\_BOARD\_ENABLE\_SENSOR\_RHT]\$}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{comment}{// <gpio> SL\_BOARD\_ENABLE\_SENSOR\_HALL}}
+\DoxyCodeLine{49 \textcolor{comment}{// \$[GPIO\_SL\_BOARD\_ENABLE\_SENSOR\_HALL]}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#define SL\_BOARD\_ENABLE\_SENSOR\_HALL\_PORT         gpioPortB}}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#define SL\_BOARD\_ENABLE\_SENSOR\_HALL\_PIN          10}}
+\DoxyCodeLine{52 \textcolor{comment}{// [GPIO\_SL\_BOARD\_ENABLE\_SENSOR\_HALL]\$}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \textcolor{comment}{// <gpio> SL\_BOARD\_ENABLE\_SENSOR\_PRESSURE}}
+\DoxyCodeLine{55 \textcolor{comment}{// \$[GPIO\_SL\_BOARD\_ENABLE\_SENSOR\_PRESSURE]}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#define SL\_BOARD\_ENABLE\_SENSOR\_PRESSURE\_PORT     gpioPortF}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#define SL\_BOARD\_ENABLE\_SENSOR\_PRESSURE\_PIN      9}}
+\DoxyCodeLine{58 \textcolor{comment}{// [GPIO\_SL\_BOARD\_ENABLE\_SENSOR\_PRESSURE]\$}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{comment}{// <gpio> SL\_BOARD\_ENABLE\_SENSOR\_LIGHT}}
+\DoxyCodeLine{61 \textcolor{comment}{// \$[GPIO\_SL\_BOARD\_ENABLE\_SENSOR\_LIGHT]}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#define SL\_BOARD\_ENABLE\_SENSOR\_LIGHT\_PORT        gpioPortF}}
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#define SL\_BOARD\_ENABLE\_SENSOR\_LIGHT\_PIN         9}}
+\DoxyCodeLine{64 \textcolor{comment}{// [GPIO\_SL\_BOARD\_ENABLE\_SENSOR\_LIGHT]\$}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{comment}{// <gpio> SL\_BOARD\_ENABLE\_SENSOR\_GAS}}
+\DoxyCodeLine{67 \textcolor{comment}{// \$[GPIO\_SL\_BOARD\_ENABLE\_SENSOR\_GAS]}}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#define SL\_BOARD\_ENABLE\_SENSOR\_GAS\_PORT          gpioPortF}}
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#define SL\_BOARD\_ENABLE\_SENSOR\_GAS\_PIN           14}}
+\DoxyCodeLine{70 \textcolor{comment}{// [GPIO\_SL\_BOARD\_ENABLE\_SENSOR\_GAS]\$}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \textcolor{comment}{// <gpio> SL\_BOARD\_ENABLE\_SENSOR\_IMU}}
+\DoxyCodeLine{73 \textcolor{comment}{// \$[GPIO\_SL\_BOARD\_ENABLE\_SENSOR\_IMU]}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define SL\_BOARD\_ENABLE\_SENSOR\_IMU\_PORT          gpioPortF}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define SL\_BOARD\_ENABLE\_SENSOR\_IMU\_PIN           8}}
+\DoxyCodeLine{76 \textcolor{comment}{// [GPIO\_SL\_BOARD\_ENABLE\_SENSOR\_IMU]\$}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{comment}{// <gpio> SL\_BOARD\_ENABLE\_SENSOR\_MICROPHONE}}
+\DoxyCodeLine{79 \textcolor{comment}{// \$[GPIO\_SL\_BOARD\_ENABLE\_SENSOR\_MICROPHONE]}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define SL\_BOARD\_ENABLE\_SENSOR\_MICROPHONE\_PORT   gpioPortF}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define SL\_BOARD\_ENABLE\_SENSOR\_MICROPHONE\_PIN    10}}
+\DoxyCodeLine{82 \textcolor{comment}{// [GPIO\_SL\_BOARD\_ENABLE\_SENSOR\_MICROPHONE]\$}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 \textcolor{comment}{// <<< sl:end pin\_tool >>>}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// SL\_BOARD\_CONTROL\_CONFIG\_H}}
+
+\end{DoxyCode}

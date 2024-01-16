@@ -1,0 +1,60 @@
+\hypertarget{letimer_8h_source}{}\doxysection{letimer.\+h}
+\label{letimer_8h_source}\index{src/Header Files/letimer.h@{src/Header Files/letimer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//***********************************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{// Include files}}
+\DoxyCodeLine{3 \textcolor{comment}{//***********************************************************************************}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifndef LETIMER\_HG}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define LETIMER\_HG}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{comment}{/* System include statements */}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{comment}{/* Silicon Labs include statements */}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}em\_letimer.h"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}em\_gpio.h"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}em\_cmu.h"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}em\_assert.h"{}}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{comment}{/* The developer's include statements */}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}scheduler.h"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}sleep\_routines.h"{}}}
+\DoxyCodeLine{19 \textcolor{comment}{//***********************************************************************************}}
+\DoxyCodeLine{20 \textcolor{comment}{// defined files}}
+\DoxyCodeLine{21 \textcolor{comment}{//***********************************************************************************}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define LETIMER\_HZ      1000 }\textcolor{comment}{// Utilizing ULFRCO oscillator for LETIMERs}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define LETIMER\_EM    EM4}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{comment}{//***********************************************************************************}}
+\DoxyCodeLine{26 \textcolor{comment}{// global variables}}
+\DoxyCodeLine{27 \textcolor{comment}{//***********************************************************************************}}
+\DoxyCodeLine{28 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{29     \textcolor{keywordtype}{bool}            debugRun;           \textcolor{comment}{// True = keep LETIMER running will halted}}
+\DoxyCodeLine{30     \textcolor{keywordtype}{bool}            enable;             \textcolor{comment}{// enable the LETIMER upon completion of open}}
+\DoxyCodeLine{31     uint32\_t        out\_pin\_route0;     \textcolor{comment}{// out 0 route to gpio port/pin}}
+\DoxyCodeLine{32     uint32\_t        out\_pin\_route1;     \textcolor{comment}{// out 1 route to gpio port/pin}}
+\DoxyCodeLine{33     \textcolor{keywordtype}{bool}            out\_pin\_0\_en;       \textcolor{comment}{// enable out 0 route}}
+\DoxyCodeLine{34     \textcolor{keywordtype}{bool}            out\_pin\_1\_en;       \textcolor{comment}{// enable out 1 route}}
+\DoxyCodeLine{35     \textcolor{keywordtype}{float}           period;             \textcolor{comment}{// seconds}}
+\DoxyCodeLine{36     \textcolor{keywordtype}{float}           active\_period;      \textcolor{comment}{// seconds}}
+\DoxyCodeLine{37     \textcolor{keywordtype}{bool}      comp0\_irq\_enable;}
+\DoxyCodeLine{38     uint32\_t  comp0\_cb;}
+\DoxyCodeLine{39     \textcolor{keywordtype}{bool}      comp1\_irq\_enable;}
+\DoxyCodeLine{40     uint32\_t  comp1\_cb;}
+\DoxyCodeLine{41     \textcolor{keywordtype}{bool}      uf\_irq\_enable;}
+\DoxyCodeLine{42     uint32\_t  uf\_cb;}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \} \mbox{\hyperlink{struct_a_p_p___l_e_t_i_m_e_r___p_w_m___type_def}{APP\_LETIMER\_PWM\_TypeDef}} ;}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{//***********************************************************************************}}
+\DoxyCodeLine{48 \textcolor{comment}{// function prototypes}}
+\DoxyCodeLine{49 \textcolor{comment}{//***********************************************************************************}}
+\DoxyCodeLine{50 \textcolor{keywordtype}{void} \mbox{\hyperlink{letimer_8c_a4653df6b569762ff8dae0013a9942a56}{letimer\_pwm\_open}}(LETIMER\_TypeDef *letimer, \mbox{\hyperlink{struct_a_p_p___l_e_t_i_m_e_r___p_w_m___type_def}{APP\_LETIMER\_PWM\_TypeDef}} *app\_letimer\_struct);}
+\DoxyCodeLine{51 \textcolor{keywordtype}{void} \mbox{\hyperlink{letimer_8c_a87f7457a1824194f038e69c576dd7748}{letimer\_start}}(LETIMER\_TypeDef *letimer, \textcolor{keywordtype}{bool} enable);}
+\DoxyCodeLine{52 \textcolor{keywordtype}{void} \mbox{\hyperlink{letimer_8c_a8cf29979c5c93891ee0e15e1ae618a11}{LETIMER0\_IRQHandler}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

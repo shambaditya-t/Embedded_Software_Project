@@ -1,0 +1,42 @@
+\hypertarget{cmu_8c}{}\doxysection{src/\+Source Files/cmu.c File Reference}
+\label{cmu_8c}\index{src/Source Files/cmu.c@{src/Source Files/cmu.c}}
+
+
+This file is responsible for enabling all the oscillators and clock tree.  
+
+
+{\ttfamily \#include \char`\"{}cmu.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{cmu_8c_a0bf9288af36bde6e21cc7c79382fff11}{cmu\+\_\+open}} (void)
+\begin{DoxyCompactList}\small\item\em It is responsible for enabling all the oscillators and routing the clock tree for the applications. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file is responsible for enabling all the oscillators and clock tree. 
+
+\begin{DoxyAuthor}{Author}
+Shambaditya Tarafder 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/2/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cmu_8c_a0bf9288af36bde6e21cc7c79382fff11}\label{cmu_8c_a0bf9288af36bde6e21cc7c79382fff11}} 
+\index{cmu.c@{cmu.c}!cmu\_open@{cmu\_open}}
+\index{cmu\_open@{cmu\_open}!cmu.c@{cmu.c}}
+\doxysubsubsection{\texorpdfstring{cmu\_open()}{cmu\_open()}}
+{\footnotesize\ttfamily void cmu\+\_\+open (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+It is responsible for enabling all the oscillators and routing the clock tree for the applications. 
+
+CMU is going to enable the oscillators.\+The LFRCO AND LFXO is going to be disabled.\+Routing the LF clock to the LF clock tree and enabling clock tree onto LE branches.
+
+\begin{DoxyNote}{Note}
+This should always be run/worked on before toucking any other things 
+\end{DoxyNote}

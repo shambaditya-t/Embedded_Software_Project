@@ -1,0 +1,77 @@
+\hypertarget{brd__config_8h_source}{}\doxysection{brd\+\_\+config.\+h}
+\label{brd__config_8h_source}\index{src/Header Files/brd\_config.h@{src/Header Files/brd\_config.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef BRD\_CONFIG\_HG}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define BRD\_CONFIG\_HG}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{comment}{//***********************************************************************************}}
+\DoxyCodeLine{5 \textcolor{comment}{// Include files}}
+\DoxyCodeLine{6 \textcolor{comment}{//***********************************************************************************}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}em\_gpio.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}em\_cmu.h"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{comment}{//***********************************************************************************}}
+\DoxyCodeLine{11 \textcolor{comment}{// defined files}}
+\DoxyCodeLine{12 \textcolor{comment}{//***********************************************************************************}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{comment}{// LED 0 pin is}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define LED\_RED\_PORT       gpioPortD}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define LED\_RED\_PIN        8u}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define LED\_RED\_DEFAULT    false   }\textcolor{comment}{// Default false (0) = off, true (1) = on}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#define LED\_RED\_GPIOMODE   gpioModePushPull}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{comment}{// LED 1 pin is}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define LED\_GREEN\_PORT       gpioPortD}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define LED\_GREEN\_PIN        9u}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define LED\_GREEN\_DEFAULT    false }\textcolor{comment}{// Default false (0) = off, true (1) = on}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define LED\_GREEN\_GPIOMODE   gpioModePushPull}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define MCU\_HFXO\_FREQ           cmuHFRCOFreq\_26M0Hz}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{comment}{// GPIO pin setup}}
+\DoxyCodeLine{30 \textcolor{comment}{//\#define STRONG\_DRIVE}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#ifdef STRONG\_DRIVE}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{    \#define LED\_RED\_DRIVE\_STRENGTH      gpioDriveStrengthStrongAlternateStrong}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{    \#define LED\_GREEN\_DRIVE\_STRENGTH    gpioDriveStrengthStrongAlternateStrong}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{    \#define LED\_RED\_DRIVE\_STRENGTH      gpioDriveStrengthWeakAlternateWeak}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{    \#define LED\_GREEN\_DRIVE\_STRENGTH    gpioDriveStrengthWeakAlternateWeak}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{comment}{// LETIMER PWM Configuration}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#define   PWM\_ROUTE\_0     LETIMER\_ROUTELOC0\_OUT0LOC\_LOC17}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#define   PWM\_ROUTE\_1     LETIMER\_ROUTELOC0\_OUT1LOC\_LOC16}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{comment}{//ThunderboardRGB LED pin definitions}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#define RGB\_ENABLE\_PORT   gpioPortJ}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#define RGB\_ENABLE\_PIN    14}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#define RGB0\_PORT         gpioPortI}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#define RGB0\_PIN          0}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#define RGB1\_PORT         gpioPortI}}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#define RGB1\_PIN          1}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#define RGB2\_PORT         gpioPortI}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#define RGB2\_PIN          2}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#define RGB3\_PORT         gpioPortI}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#define RGB3\_PIN          3}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#define RGB\_RED\_PORT      gpioPortD}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#define RGB\_RED\_PIN       11}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#define RGB\_GREEN\_PORT    gpioPortD}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#define RGB\_GREEN\_PIN     12}}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#define RGB\_BLUE\_PORT     gpioPortD}}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define RGB\_BLUE\_PIN      13}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#define RGB\_DEFAULT\_OFF     false}}
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#define COLOR\_DEFAULT\_OFF   false}}
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#define RED\_RGB\_LOC       TIMER\_ROUTELOC0\_CC0LOC\_LOC19}}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#define GREEN\_RGB\_LOC     TIMER\_ROUTELOC0\_CC1LOC\_LOC19}}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#define BLUE\_RGB\_LOC      TIMER\_ROUTELOC0\_CC2LOC\_LOC19}}
+\DoxyCodeLine{67 \textcolor{comment}{//***********************************************************************************}}
+\DoxyCodeLine{68 \textcolor{comment}{// function prototypes}}
+\DoxyCodeLine{69 \textcolor{comment}{//***********************************************************************************}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

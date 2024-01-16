@@ -1,0 +1,42 @@
+\hypertarget{gpio_8c}{}\doxysection{src/\+Source Files/gpio.c File Reference}
+\label{gpio_8c}\index{src/Source Files/gpio.c@{src/Source Files/gpio.c}}
+
+
+GPIO ports used for enabling/disabling LED.  
+
+
+{\ttfamily \#include \char`\"{}gpio.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{gpio_8c_a91a4dff26d2a05c597f7c541a6026613}{gpio\+\_\+open}} (void)
+\begin{DoxyCompactList}\small\item\em the GPIO is basically used for the LEDs \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+GPIO ports used for enabling/disabling LED. 
+
+\begin{DoxyAuthor}{Author}
+Shambaditya Tarafder 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/2/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{gpio_8c_a91a4dff26d2a05c597f7c541a6026613}\label{gpio_8c_a91a4dff26d2a05c597f7c541a6026613}} 
+\index{gpio.c@{gpio.c}!gpio\_open@{gpio\_open}}
+\index{gpio\_open@{gpio\_open}!gpio.c@{gpio.c}}
+\doxysubsubsection{\texorpdfstring{gpio\_open()}{gpio\_open()}}
+{\footnotesize\ttfamily void gpio\+\_\+open (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+the GPIO is basically used for the LEDs 
+
+The function uses the CMU\+\_\+\+Clock\+Enable to set up the clock for the GPIO to be used for the pinmode and driver strength.
+
+\begin{DoxyNote}{Note}
+This function doesnt return anything and should be utilized while and setting up the GPIO drivers etc. 
+\end{DoxyNote}

@@ -1,0 +1,90 @@
+\hypertarget{letimer_8c}{}\doxysection{src/\+Source Files/letimer.c File Reference}
+\label{letimer_8c}\index{src/Source Files/letimer.c@{src/Source Files/letimer.c}}
+
+
+This file contains the letimer driver function.  
+
+
+{\ttfamily \#include \char`\"{}letimer.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{letimer_8c_a4653df6b569762ff8dae0013a9942a56}{letimer\+\_\+pwm\+\_\+open}} (LETIMER\+\_\+\+Type\+Def $\ast$letimer, \mbox{\hyperlink{struct_a_p_p___l_e_t_i_m_e_r___p_w_m___type_def}{APP\+\_\+\+LETIMER\+\_\+\+PWM\+\_\+\+Type\+Def}} $\ast$app\+\_\+letimer\+\_\+struct)
+\begin{DoxyCompactList}\small\item\em Driver to open an set an LETIMER peripheral. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{letimer_8c_a87f7457a1824194f038e69c576dd7748}{letimer\+\_\+start}} (LETIMER\+\_\+\+Type\+Def $\ast$letimer, bool enable)
+\begin{DoxyCompactList}\small\item\em Function to enable/turn-\/on or disable/turn-\/off the LETIMER specified. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{letimer_8c_a8cf29979c5c93891ee0e15e1ae618a11}{LETIMER0\+\_\+\+IRQHandler}} (void)
+\begin{DoxyCompactList}\small\item\em This is the setup for the LETIMER0 IRQ Handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the letimer driver function. 
+
+\begin{DoxyAuthor}{Author}
+Shambaditya Tarafder 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9/23/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{letimer_8c_a8cf29979c5c93891ee0e15e1ae618a11}\label{letimer_8c_a8cf29979c5c93891ee0e15e1ae618a11}} 
+\index{letimer.c@{letimer.c}!LETIMER0\_IRQHandler@{LETIMER0\_IRQHandler}}
+\index{LETIMER0\_IRQHandler@{LETIMER0\_IRQHandler}!letimer.c@{letimer.c}}
+\doxysubsubsection{\texorpdfstring{LETIMER0\_IRQHandler()}{LETIMER0\_IRQHandler()}}
+{\footnotesize\ttfamily void LETIMER0\+\_\+\+IRQHandler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This is the setup for the LETIMER0 IRQ Handler. 
+
+Its basically enables a default Interrupt Service Routine to handle interrupts that are not defined by the user.\+Adding and clearing(ex. comp0,comp1,uf) iterrupts and clearing out initial flag registers. enables a default Interrupt Service Routine to handle interrupts that are not defined by the user.
+
+\begin{DoxyNote}{Note}
+This function used for clearing and adding interrupts not defined by the user 
+\end{DoxyNote}
+\mbox{\Hypertarget{letimer_8c_a4653df6b569762ff8dae0013a9942a56}\label{letimer_8c_a4653df6b569762ff8dae0013a9942a56}} 
+\index{letimer.c@{letimer.c}!letimer\_pwm\_open@{letimer\_pwm\_open}}
+\index{letimer\_pwm\_open@{letimer\_pwm\_open}!letimer.c@{letimer.c}}
+\doxysubsubsection{\texorpdfstring{letimer\_pwm\_open()}{letimer\_pwm\_open()}}
+{\footnotesize\ttfamily void letimer\+\_\+pwm\+\_\+open (\begin{DoxyParamCaption}\item[{LETIMER\+\_\+\+Type\+Def $\ast$}]{letimer,  }\item[{\mbox{\hyperlink{struct_a_p_p___l_e_t_i_m_e_r___p_w_m___type_def}{APP\+\_\+\+LETIMER\+\_\+\+PWM\+\_\+\+Type\+Def}} $\ast$}]{app\+\_\+letimer\+\_\+struct }\end{DoxyParamCaption})}
+
+
+
+Driver to open an set an LETIMER peripheral. 
+
+This routine is a low level driver. The application code calls this function to open one of the LETIMER peripherals for PWM operation to directly drive GPIO output pins of the device and/or create interrupts that can be used as a system \char`\"{}heart beat\char`\"{} or by a scheduler to determine whether any system functions need to be serviced.\+Clearing and enabling the registers
+
+\begin{DoxyNote}{Note}
+This function is normally called once to initialize the peripheral and the function \mbox{\hyperlink{letimer_8c_a87f7457a1824194f038e69c576dd7748}{letimer\+\_\+start()}} is called to turn-\/on or turn-\/off the LETIMER PWM operation,clearing and enabling the registers as well.
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em letimer} & Pointer to the base peripheral address of the LETIMER peripheral being opened\\
+\hline
+\mbox{\texttt{ in}}  & {\em app\+\_\+letimer\+\_\+struct} & Is the STRUCT that the calling routine will use to set the parameters for PWM operation \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{letimer_8c_a87f7457a1824194f038e69c576dd7748}\label{letimer_8c_a87f7457a1824194f038e69c576dd7748}} 
+\index{letimer.c@{letimer.c}!letimer\_start@{letimer\_start}}
+\index{letimer\_start@{letimer\_start}!letimer.c@{letimer.c}}
+\doxysubsubsection{\texorpdfstring{letimer\_start()}{letimer\_start()}}
+{\footnotesize\ttfamily void letimer\+\_\+start (\begin{DoxyParamCaption}\item[{LETIMER\+\_\+\+Type\+Def $\ast$}]{letimer,  }\item[{bool}]{enable }\end{DoxyParamCaption})}
+
+
+
+Function to enable/turn-\/on or disable/turn-\/off the LETIMER specified. 
+
+letimer\+\_\+start uses the lower level API interface of the EM libraries to directly interface to the LETIMER peripheral to turn-\/on or off its counter
+
+\begin{DoxyNote}{Note}
+This function should only be called to enable/turn-\/on the LETIMER once the LETIMER peripheral has been completely configured via its open driver
+\end{DoxyNote}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em letimer} & Pointer to the base peripheral address of the LETIMER peripheral being opened\\
+\hline
+\mbox{\texttt{ in}}  & {\em enable} & Variable to turn-\/on the LETIMER if boolean value = true and turn-\/off the LETIMER if the boolean value = false \\
+\hline
+\end{DoxyParams}
